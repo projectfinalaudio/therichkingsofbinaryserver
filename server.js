@@ -6,7 +6,7 @@ const cors = require('cors');
 // MIDDLEWARE
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5500'
+    origin: 'https://richkingsfrontend.onrender.com'
 }))
 
 
@@ -14,7 +14,6 @@ const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
 
 const storeItems = new Map([
     [1, { priceInCents: 20000, name: 'Binary Bot' }],
-    // [2, { priceInCents: 25000 , name: 'Dependabot'}],
 ]);
 
 
